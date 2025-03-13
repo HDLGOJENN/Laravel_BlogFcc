@@ -2,19 +2,17 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-
-
 // local blogfcc.test
-
 /*
+------- funcion original ------
 Route::get('/', function () {
-   // estas funciones se utilizan para hacer pruebas
+   -----estas funciones se utilizan para hacer pruebas----
     // return 'Freen sarocha';
 
-    // podemos retornar un array
+    ----- podemos retornar un array----
     // return ['freen'=> 'sarocha'];
 
-    // funcion original
+    
     // return view('welcome');
 //}); 
 */
@@ -22,11 +20,16 @@ Route::get('/', function () {
 // cuando no se necesita usar logica podemos acceder directamente al metodo view
 // primer parametro recibe la url a la que va a responder
 // segundo parametro la vista que queremos mostrar
-Route :: view('/', 'welcome');
+// EJEMPLO
+// Route :: view('/', 'welcome');
+
 // Ejercicio
-Route :: view('contacto', 'contact');
-Route :: view('blog', 'blog');
-Route :: view('nosotros', 'about');
+// RUTAS CON NOMBRE
+// Estamos accediendo al nombre de la ruta en lugar de la url
+Route :: view('/', 'welcome')-> name ('welcome');
+Route :: view('nosotros', 'about')-> name ('about');
+Route :: view('blog', 'blog')-> name ('blog');
+Route :: view('whatever', 'contact')-> name ('contact');
 
 
 
