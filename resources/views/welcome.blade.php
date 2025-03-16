@@ -7,19 +7,10 @@
     <title>Inicio</title>
 </head>
 <body>
-    {{-- <h1>PROFE CONDE = SABIDURIA</h1> --}}
 
-    {{-- Forma acediendo direntamente a la url q se asigno --}}
-    {{-- <li><a href="/">Home</a></li> --}}
-
-
-    <ul>
-        {{-- Para hacer referencia al nombre de la ruta --}}
-        {{-- Forma 1: Utilizando php plano --}}
-        <li><a href="<?=route('contact') ?>">Contacto</a></li>
-        <li><a href="<?=route('welcome') ?>">Home</a></li>
-        <li><a href="<?=route('blog') ?>"">Blog</a></li>
-        <li><a href="<?=route('about') ?>">Nosotros</a></li>
-    </ul>
+    {{-- Vamos a usar un include de php usando las directivas de blade --}}
+    {{-- pasamos la direccion de las vistas/ direccion del archivo que queremos incluir --}}
+    @include('partials.navigation')
+    <h1>Hola Freen sarocha</h1>
 </body>
 </html>

@@ -7,6 +7,7 @@
     <title>Blog</title>
 </head>
 <body>
+    @include('partials.navigation')
     <h1>Bienvenidos a mi blog</h1>
 </body>
 </html>
