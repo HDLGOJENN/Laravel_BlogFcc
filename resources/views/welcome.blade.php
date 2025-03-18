@@ -1,16 +1,23 @@
-<!DOCTYPE html>
-<html lang="eS">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Inicio</title>
-</head>
-<body>
+{{-- Dos formas para pasar componentes --}}
 
-    {{-- Vamos a usar un include de php usando las directivas de blade --}}
-    {{-- pasamos la direccion de las vistas/ direccion del archivo que queremos incluir --}}
-    @include('partials.navigation')
-    <h1>Hola Freen sarocha</h1>
-</body>
-</html>
+{{-- los components se encuentran en resources/views/components --}}
+{{-- @component('components.layout')
+<h1>Hola Freen sarocha</h1>
+@endcomponent --}}
+
+{{-- segunda forma --}}
+{{-- sintaxis: <x- {nombre del componente}> </x-> --}}
+
+{{-- TAMBIEN PODEMOS UTILIZAR LA NAVIGATION COMO UN COMPONENT --}}
+{{-- <x-navigation2></x-navigation2> --}}
+
+{{-- como no hay nada dentro del componente
+podemos cerrar directamente --}}
+{{-- <x-navigation2/> --}}
+
+
+{{-- le pasamos la variable del titulo, meta-title --}}
+<x-layout meta-title="home">
+    <h1>Hola Freen Sarocha</h1>
+</x-layout>
+    
